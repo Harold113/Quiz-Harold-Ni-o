@@ -12,19 +12,10 @@ namespace Home
 {
     public partial class Fmcompra : Form
     {
+
         public Fmcompra()
         {
             InitializeComponent();
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -32,22 +23,23 @@ namespace Home
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
+            Ltlis.Items.Add("durazno");
+            Ltlis.Items.Add("pera")
+        }
+
+        private void Btreport_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
             
         }
 
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void LbTexto_Click(object sender, EventArgs e)
         {
 
         }

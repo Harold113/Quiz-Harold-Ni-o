@@ -29,63 +29,62 @@ namespace Home
         /// </summary>
         private void InitializeComponent()
         {
-            this.Listado = new System.Windows.Forms.ListBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.btcarga = new System.Windows.Forms.Button();
+            this.Ltlis = new System.Windows.Forms.ListBox();
+            this.Cbnocarga = new System.Windows.Forms.CheckBox();
             this.Btreport = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TBlista = new System.Windows.Forms.TextBox();
             this.LbTexto = new System.Windows.Forms.Label();
+            this.BtIngresar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Listado
+            // Ltlis
             // 
-            this.Listado.AccessibleDescription = "";
-            this.Listado.AccessibleName = "";
-            this.Listado.FormattingEnabled = true;
-            this.Listado.ItemHeight = 15;
-            this.Listado.Location = new System.Drawing.Point(427, 28);
-            this.Listado.Name = "Listado";
-            this.Listado.Size = new System.Drawing.Size(351, 349);
-            this.Listado.TabIndex = 1;
-            this.Listado.Tag = "";
-            this.Listado.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.Ltlis.AccessibleDescription = "";
+            this.Ltlis.AccessibleName = "";
+            this.Ltlis.FormattingEnabled = true;
+            this.Ltlis.ItemHeight = 15;
+            this.Ltlis.Items.AddRange(new object[] {
+            "Manzana",
+            "fresa ",
+            "Granada ",
+            "Kiwi"});
+            this.Ltlis.Location = new System.Drawing.Point(408, 28);
+            this.Ltlis.MultiColumn = true;
+            this.Ltlis.Name = "Ltlis";
+            this.Ltlis.Size = new System.Drawing.Size(351, 349);
+            this.Ltlis.TabIndex = 1;
+            this.Ltlis.Tag = "";
+            this.Ltlis.SelectedIndexChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
-            // checkBox1
+            // Cbnocarga
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(308, 338);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(83, 19);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // btcarga
-            // 
-            this.btcarga.Location = new System.Drawing.Point(61, 338);
-            this.btcarga.Name = "btcarga";
-            this.btcarga.Size = new System.Drawing.Size(75, 23);
-            this.btcarga.TabIndex = 5;
-            this.btcarga.Text = "Cargar ";
-            this.btcarga.UseVisualStyleBackColor = true;
-            this.btcarga.Click += new System.EventHandler(this.button1_Click);
+            this.Cbnocarga.AutoSize = true;
+            this.Cbnocarga.Location = new System.Drawing.Point(95, 358);
+            this.Cbnocarga.Name = "Cbnocarga";
+            this.Cbnocarga.Size = new System.Drawing.Size(197, 19);
+            this.Cbnocarga.TabIndex = 2;
+            this.Cbnocarga.Text = "click aqui para no cargar el texto";
+            this.Cbnocarga.UseVisualStyleBackColor = true;
+            this.Cbnocarga.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Btreport
             // 
-            this.Btreport.Location = new System.Drawing.Point(182, 338);
+            this.Btreport.Location = new System.Drawing.Point(251, 294);
             this.Btreport.Name = "Btreport";
             this.Btreport.Size = new System.Drawing.Size(75, 23);
             this.Btreport.TabIndex = 6;
             this.Btreport.Text = "Reporte ";
             this.Btreport.UseVisualStyleBackColor = true;
+            this.Btreport.Click += new System.EventHandler(this.Btreport_Click);
             // 
-            // textBox1
+            // TBlista
             // 
-            this.textBox1.Location = new System.Drawing.Point(61, 153);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 23);
-            this.textBox1.TabIndex = 8;
+            this.TBlista.Location = new System.Drawing.Point(61, 153);
+            this.TBlista.Multiline = true;
+            this.TBlista.Name = "TBlista";
+            this.TBlista.Size = new System.Drawing.Size(265, 23);
+            this.TBlista.TabIndex = 8;
+            this.TBlista.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // LbTexto
             // 
@@ -95,18 +94,28 @@ namespace Home
             this.LbTexto.Size = new System.Drawing.Size(243, 15);
             this.LbTexto.TabIndex = 9;
             this.LbTexto.Text = "Escriba los productos para generar un listado";
+            this.LbTexto.Click += new System.EventHandler(this.LbTexto_Click);
+            // 
+            // BtIngresar
+            // 
+            this.BtIngresar.Location = new System.Drawing.Point(61, 294);
+            this.BtIngresar.Name = "BtIngresar";
+            this.BtIngresar.Size = new System.Drawing.Size(75, 23);
+            this.BtIngresar.TabIndex = 10;
+            this.BtIngresar.Text = "ingresar";
+            this.BtIngresar.UseVisualStyleBackColor = true;
             // 
             // Fmcompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtIngresar);
             this.Controls.Add(this.LbTexto);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TBlista);
             this.Controls.Add(this.Btreport);
-            this.Controls.Add(this.btcarga);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.Listado);
+            this.Controls.Add(this.Cbnocarga);
+            this.Controls.Add(this.Ltlis);
             this.Name = "Fmcompra";
             this.Text = "Lista de Compras ";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -116,12 +125,12 @@ namespace Home
         }
 
         #endregion
-        private System.Windows.Forms.ListBox Listado;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button btcarga;
+        private System.Windows.Forms.ListBox Ltlis;
+        private System.Windows.Forms.CheckBox Cbnocarga;
         private System.Windows.Forms.Button Btreport;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TBlista;
         private System.Windows.Forms.Label LbTexto;
+        private System.Windows.Forms.Button BtIngresar;
     }
 }
 
