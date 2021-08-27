@@ -30,11 +30,12 @@ namespace Home
         private void InitializeComponent()
         {
             this.Ltlis = new System.Windows.Forms.ListBox();
-            this.Cbnocarga = new System.Windows.Forms.CheckBox();
             this.Btreport = new System.Windows.Forms.Button();
             this.TBlista = new System.Windows.Forms.TextBox();
             this.LbTexto = new System.Windows.Forms.Label();
             this.BtIngresar = new System.Windows.Forms.Button();
+            this.lblfrutas = new System.Windows.Forms.Label();
+            this.bteliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Ltlis
@@ -48,28 +49,17 @@ namespace Home
             "fresa ",
             "Granada ",
             "Kiwi"});
-            this.Ltlis.Location = new System.Drawing.Point(408, 28);
+            this.Ltlis.Location = new System.Drawing.Point(408, 118);
             this.Ltlis.MultiColumn = true;
             this.Ltlis.Name = "Ltlis";
-            this.Ltlis.Size = new System.Drawing.Size(351, 349);
+            this.Ltlis.Size = new System.Drawing.Size(351, 259);
             this.Ltlis.TabIndex = 1;
             this.Ltlis.Tag = "";
             this.Ltlis.SelectedIndexChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
-            // Cbnocarga
-            // 
-            this.Cbnocarga.AutoSize = true;
-            this.Cbnocarga.Location = new System.Drawing.Point(95, 358);
-            this.Cbnocarga.Name = "Cbnocarga";
-            this.Cbnocarga.Size = new System.Drawing.Size(197, 19);
-            this.Cbnocarga.TabIndex = 2;
-            this.Cbnocarga.Text = "click aqui para no cargar el texto";
-            this.Cbnocarga.UseVisualStyleBackColor = true;
-            this.Cbnocarga.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // Btreport
             // 
-            this.Btreport.Location = new System.Drawing.Point(251, 294);
+            this.Btreport.Location = new System.Drawing.Point(155, 354);
             this.Btreport.Name = "Btreport";
             this.Btreport.Size = new System.Drawing.Size(75, 23);
             this.Btreport.TabIndex = 6;
@@ -91,9 +81,9 @@ namespace Home
             this.LbTexto.AutoSize = true;
             this.LbTexto.Location = new System.Drawing.Point(61, 121);
             this.LbTexto.Name = "LbTexto";
-            this.LbTexto.Size = new System.Drawing.Size(243, 15);
+            this.LbTexto.Size = new System.Drawing.Size(221, 15);
             this.LbTexto.TabIndex = 9;
-            this.LbTexto.Text = "Escriba los productos para generar un listado";
+            this.LbTexto.Text = "Escriba los productos que desee agregar ";
             this.LbTexto.Click += new System.EventHandler(this.LbTexto_Click);
             // 
             // BtIngresar
@@ -104,17 +94,39 @@ namespace Home
             this.BtIngresar.TabIndex = 10;
             this.BtIngresar.Text = "ingresar";
             this.BtIngresar.UseVisualStyleBackColor = true;
+            this.BtIngresar.Click += new System.EventHandler(this.BtIngresar_Click);
+            // 
+            // lblfrutas
+            // 
+            this.lblfrutas.AutoSize = true;
+            this.lblfrutas.Location = new System.Drawing.Point(408, 61);
+            this.lblfrutas.Name = "lblfrutas";
+            this.lblfrutas.Size = new System.Drawing.Size(191, 45);
+            this.lblfrutas.TabIndex = 11;
+            this.lblfrutas.Text = "\r\n\r\nSelecione alguno de los productos ";
+            this.lblfrutas.Click += new System.EventHandler(this.lblfrutas_Click);
+            // 
+            // bteliminar
+            // 
+            this.bteliminar.Location = new System.Drawing.Point(251, 294);
+            this.bteliminar.Name = "bteliminar";
+            this.bteliminar.Size = new System.Drawing.Size(75, 23);
+            this.bteliminar.TabIndex = 12;
+            this.bteliminar.Text = "eliminar";
+            this.bteliminar.UseVisualStyleBackColor = true;
+            this.bteliminar.Click += new System.EventHandler(this.bteliminar_Click);
             // 
             // Fmcompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bteliminar);
+            this.Controls.Add(this.lblfrutas);
             this.Controls.Add(this.BtIngresar);
             this.Controls.Add(this.LbTexto);
             this.Controls.Add(this.TBlista);
             this.Controls.Add(this.Btreport);
-            this.Controls.Add(this.Cbnocarga);
             this.Controls.Add(this.Ltlis);
             this.Name = "Fmcompra";
             this.Text = "Lista de Compras ";
@@ -126,11 +138,12 @@ namespace Home
 
         #endregion
         private System.Windows.Forms.ListBox Ltlis;
-        private System.Windows.Forms.CheckBox Cbnocarga;
         private System.Windows.Forms.Button Btreport;
         private System.Windows.Forms.TextBox TBlista;
         private System.Windows.Forms.Label LbTexto;
         private System.Windows.Forms.Button BtIngresar;
+        private System.Windows.Forms.Label lblfrutas;
+        private System.Windows.Forms.Button bteliminar;
     }
 }
 
