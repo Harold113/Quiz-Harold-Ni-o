@@ -31,7 +31,9 @@ namespace Home
 
         private void Btreport_Click(object sender, EventArgs e)
         {
+            Form2 forma2 = new Form2(TBlista.Text);
 
+            forma2.ShowDialog();
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -65,6 +67,27 @@ namespace Home
         private void lblfrutas_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK) ;
+            {
+                tlabrir.Text = openFileDialog1.FileName;
+            }
+        }
+
+        private void tlsalvar_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK) ;
+            {
+                tlsalvar.Text = saveFileDialog1.FileName;
+            }
         }
     }
 }

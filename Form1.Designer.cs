@@ -29,6 +29,7 @@ namespace Home
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Ltlis = new System.Windows.Forms.ListBox();
             this.Btreport = new System.Windows.Forms.Button();
             this.TBlista = new System.Windows.Forms.TextBox();
@@ -36,6 +37,16 @@ namespace Home
             this.BtIngresar = new System.Windows.Forms.Button();
             this.lblfrutas = new System.Windows.Forms.Label();
             this.bteliminar = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlabrir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsalvar = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Ltlis
@@ -116,11 +127,59 @@ namespace Home
             this.bteliminar.UseVisualStyleBackColor = true;
             this.bteliminar.Click += new System.EventHandler(this.bteliminar_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlabrir,
+            this.tlsalvar});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            this.archivoToolStripMenuItem.Click += new System.EventHandler(this.archivoToolStripMenuItem_Click);
+            // 
+            // tlabrir
+            // 
+            this.tlabrir.Name = "tlabrir";
+            this.tlabrir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.tlabrir.Size = new System.Drawing.Size(180, 22);
+            this.tlabrir.Text = "Abrir ";
+            this.tlabrir.ToolTipText = "Use para buscar un archivo";
+            this.tlabrir.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
+            this.tlabrir.MouseEnter += new System.EventHandler(this.archivoToolStripMenuItem_Click);
+            // 
+            // tlsalvar
+            // 
+            this.tlsalvar.Name = "tlsalvar";
+            this.tlsalvar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.tlsalvar.Size = new System.Drawing.Size(180, 22);
+            this.tlsalvar.Text = "Salvar ";
+            this.tlsalvar.Click += new System.EventHandler(this.tlsalvar_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Fmcompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.bteliminar);
             this.Controls.Add(this.lblfrutas);
             this.Controls.Add(this.BtIngresar);
@@ -131,6 +190,8 @@ namespace Home
             this.Name = "Fmcompra";
             this.Text = "Lista de Compras ";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,6 +205,15 @@ namespace Home
         private System.Windows.Forms.Button BtIngresar;
         private System.Windows.Forms.Label lblfrutas;
         private System.Windows.Forms.Button bteliminar;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tlabrir;
+        private System.Windows.Forms.ToolStripMenuItem tlsalvar;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
